@@ -14,6 +14,8 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {}
 
   addCurrentSearchTerm() {
+    // do not run if currentSearch is empty
+    if (!this.currentSearch) return;
     this.searchHistory.push(this.currentSearch);
     console.log(this.searchHistory);
     this.searchService.searchHistoryChanged.emit(this.searchHistory.slice());

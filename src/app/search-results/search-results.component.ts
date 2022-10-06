@@ -12,7 +12,6 @@ export class SearchResultsComponent implements OnInit {
 
   ngOnInit(): void {
     this.searchService.searchHistoryChanged.subscribe((searchHistoryArray) => {
-      console.log('hello');
       this.searchHistory = searchHistoryArray;
     });
   }
