@@ -1,1 +1,13 @@
-<p *ngFor="let search of searchHistory">{{ search }}</p>
+<div class="container" id="parent-container">
+  <h1 class="display-3">Search History</h1>
+  <hr />
+  <div class="py-1 px-3 rounded" id="search-history-list">
+    <h1
+      appRandomColor
+      class="display-5 my-4 rounded"
+      *ngFor="let search of searchHistory"
+    >
+      {{ search }}
+    </h1>
+  </div>
+</div>
