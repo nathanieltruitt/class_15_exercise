@@ -17,7 +17,6 @@ export class NavbarComponent implements OnInit {
     // do not run if currentSearch is empty
     if (!this.currentSearch) return;
     this.searchHistory.push(this.currentSearch);
-    console.log(this.searchHistory);
     this.searchService.searchHistoryChanged.emit(this.searchHistory.slice());
   }
 }
